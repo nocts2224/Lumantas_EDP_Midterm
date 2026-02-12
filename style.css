@@ -31,7 +31,6 @@ section {
                 radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
 }
 
-/* HERO - The Tokyo Skyline at Sunset/Rain */
 .hero {
     background: linear-gradient(180deg, #1e3c72 0%, #2a5298 50%, #87ceeb 100%);
     color: white;
@@ -136,7 +135,7 @@ section {
     aspect-ratio: 16 / 9;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 4px; /* Shinkai style is often more rectangular/sharp */
+    border-radius: 4px; 
     display: flex;
     flex-direction: column;
     justify-content: center;

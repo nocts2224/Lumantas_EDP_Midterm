@@ -1,50 +1,50 @@
-// --- NEW: PEXELS API CONFIGURATION ---
-const PEXELS_API_KEY = 'yy626vOjK7RjgKgjAn4SL2JZLC2v23KaWtnLdPlQM9i9MEhUGG7y0ikv'; // Get one at pexels.com/api
-const videoElement = document.getElementById("featuredVideo");
+// // --- NEW: PEXELS API CONFIGURATION ---
+// const PEXELS_API_KEY = 'yy626vOjK7RjgKgjAn4SL2JZLC2v23KaWtnLdPlQM9i9MEhUGG7y0ikv'; // Get one at pexels.com/api
+// const videoElement = document.getElementById("featuredVideo");
 
-async function loadAestheticVideo() {
-    try {
-        const query = "rain tokyo street";
+// async function loadAestheticVideo() {
+//     try {
+//         const query = "rain tokyo street";
 
-        const response = await fetch(
-            `https://api.pexels.com/videos/search?query=${query}&per_page=1&orientation=landscape`,
-            {
-                headers: { Authorization: PEXELS_API_KEY }
-            }
-        );
+//         const response = await fetch(
+//             `https://api.pexels.com/videos/search?query=${query}&per_page=1&orientation=landscape`,
+//             {
+//                 headers: { Authorization: PEXELS_API_KEY }
+//             }
+//         );
 
-        const data = await response.json();
+//         const data = await response.json();
 
-        if (data.videos && data.videos.length > 0) {
-            // Pick the HD file from the list
-            const videoFile =
-                data.videos[0].video_files.find(file => file.width === 1920) ||
-                data.videos[0].video_files[0];
+//         if (data.videos && data.videos.length > 0) {
+//             // Pick the HD file from the list
+//             const videoFile =
+//                 data.videos[0].video_files.find(file => file.width === 1920) ||
+//                 data.videos[0].video_files[0];
 
-            videoElement.src = videoFile.link;
-            videoElement.load();
-        }
-    } catch (error) {
-        console.error("Failed to fetch video:", error);
+//             videoElement.src = videoFile.link;
+//             videoElement.load();
+//         }
+//     } catch (error) {
+//         console.error("Failed to fetch video:", error);
 
-        // Fallback to a local video if API fails
-        videoElement.src = "assets/video.mp4";
-    }
-}
+//         // Fallback to a local video if API fails
+//         videoElement.src = "assets/video.mp4";
+//     }
+// }
 
-// Call the function
-loadAestheticVideo();
+// // Call the function
+// loadAestheticVideo();
 
 
-// --- UPDATED: MOUSE EVENTS ---
-// We remove the manual color changes so they don't override our beautiful CSS gradients
-const projectCards = document.querySelectorAll(".project-card");
+// // --- UPDATED: MOUSE EVENTS ---
+// // We remove the manual color changes so they don't override our beautiful CSS gradients
+// const projectCards = document.querySelectorAll(".project-card");
 
-projectCards.forEach(card => {
-    card.addEventListener("mouseenter", () => {
-        // You can add sounds here later, but leave the colors to the CSS!
-    });
-});
+// projectCards.forEach(card => {
+//     card.addEventListener("mouseenter", () => {
+//         // You can add sounds here later, but leave the colors to the CSS!
+//     });
+// });
 
 
 // --- REST OF YOUR EXISTING CODE ---
